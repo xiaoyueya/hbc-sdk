@@ -40,6 +40,9 @@ type BlockData struct {
 			Time               string      `json:"time"`
 			TotalTxs           string      `json:"total_txs"`
 			ValidatorsHash     string      `json:"validators_hash"`
+			LastBlockId struct{
+				Hash string `json:"hash"`
+			} `json:"last_block_id"`
 		} `json:"header"`
 	} `json:"block"`
 }
