@@ -15,6 +15,11 @@ type BaseResponse struct {
 
 type BlockData struct {
 	BaseResponse
+	BlockMeta struct {
+		BlockId struct {
+			Hash string `json:"hash"`
+		} `json:"block_id"`
+	} `json:"block_meta"`
 	Block struct {
 		Data struct {
 			Txs []string `json:"txs"`
